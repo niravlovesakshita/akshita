@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday Akshita 💕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🥳 Happy 16<sup>th</sup> Birthday Akshita 🎂</h1>
+      <h2>My favorite person ever 💖</h2>
+    </header>
+    <div class="video-section">
+      <video src="/assets/akshita.mov" autoplay loop></video>
+    </div>
+    <button id="playBtn">▶️</button>
+    <audio id="myAudio" loop>
+      <source src="/assets/Sweet.mp3" type="audio/mpeg" />
+    </audio>
+    <p><small>🎶 Play for Cigarettes After Sex vibes</small></p>
+
+    <div class="section">
+      <h2>💌 A Love Letter</h2>
+      <p>Happy Birthday Akshita❤️</p>
+      <p>
+        I hope your day is as beautiful and special as you are. I feel very
+        lucky to have you in my life. You bring so much happiness, love, and
+        peace into my world, and every day with you feels better because of your
+        smile.
+        <br />
+        <br />
+        You understand me, support me, and care for me in ways I never imagined.
+        With you, even simple moments feel special. You are not just my
+        girlfriend, you are my best friend and my biggest comfort.
+        <br />
+        <br />
+        On your birthday, I want you to know how much you mean to me. I promise
+        to always stand by you, make you smile, and love you with all my heart.
+        I look forward to making many more memories together. I love you so
+        much. Happy Birthday, my love ❤️✨
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📸 Our Memories</h2>
+      <div class="gallery">
+        <img src="/assets/1.jpeg" />
+        <img src="/assets/2.jpeg" />
+        <img src="/assets/3.jpeg" />
+        <img src="/assets/4.jpeg" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💖 18 Reasons Why I Love You</h2>
+      <ol class="love-list">
+        <li>You are incredibly cute and always makes your heart skip a beat.</li>
+        <li>Your loyalty makes me feel secure and deeply loved.</li>
+        <li>Your smile lights up my day, no matter how tough things get.</li>
+        <li>
+          No matter what u always support me through everything either I win or
+          losse.
+        </li>
+        <li>U listen when I need someone to talk to.</li>
+        <li>
+          Ur beautiful body reflects how u takes care of urself and I admire
+          that.
+        </li>
+        <li>U always make even ordinary moments feel special.</li>
+        <li>Ur laugh ahhh cutu is my favorite sound.</li>
+        <li>
+          U stand by me and always believs in me , even when I doubt myself.
+        </li>
+        <li>
+          Ur eyes tell stories I could listen to forever damn those eyes ahhhh.
+        </li>
+        <li>U make me and help me to become the best version of myself.</li>
+        <li>U always know how to cheer me when I feel lil low.</li>
+        <li>U respect my space while still making you feel wanted.</li>
+        <li>U bring peace into my chaotic world for real.</li>
+        <li>U make sacrifices without ever making me feel guilty.</li>
+        <li>Ur style and grace catchs my eye every single time.</li>
+        <li>U are honest and trustworthy someone I can always count on.</li>
+        <li>
+          U love just the way I am and that love is everything for me I love u
+          so much my cutu ♥️✨✨💋😭😭.
+        </li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>🎁 One Last Surprise</h2>
+      <button onclick="showPopup()">Click me 💝</button>
+    </div>
+
+    <footer>Made with endless love 💕 for Akshita</footer>
+
+    <div class="popup" id="popup">💗 I Love You! You mean everything to me, Akshita 💗</div>
+
+    <script>
+      /* Scroll animation */
+      const sections = document.querySelectorAll(".section");
+      window.addEventListener("scroll", () => {
+        sections.forEach((sec) => {
+          const top = sec.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) {
+            sec.classList.add("show");
+          }
+        });
+      });
+
+      /* Floating hearts */
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = 20 + Math.random() * 20 + "px";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }, 400);
+
+      /* Popup */
+      function showPopup() {
+        const popup = document.getElementById("popup");
+        popup.style.display = "block";
+        setTimeout(() => (popup.style.display = "none"), 4000);
+      }
+
+      const audio = document.getElementById("myAudio");
+      const btn = document.getElementById("playBtn");
+
+      btn.addEventListener("click", () => {
+        audio.play();
+        btn.style.display = "none"; // Hide button after playing
+      });
+    </script>
+  </body>
+</html>
